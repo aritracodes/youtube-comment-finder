@@ -1,0 +1,144 @@
+#commentsSection {
+    margin-top: 20px;
+}
+
+.comment {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+.comment {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eaeaea;
+}
+.video-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.video-thumbnail {
+    width: 200px;
+    height: auto;
+    margin-right: 1rem;
+}
+.video-details {
+    display: flex;
+    flex-direction: column;
+}
+.replies {
+    margin-left: 2rem;
+    display: none;
+}
+.show-replies {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.reply {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #eaeaea;
+}
+.reply-toggle-btn {
+display: flex;
+align-items: center;
+background-color: #f0f0f0;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+margin-top: 5px;
+}
+
+.reply-toggle-btn:hover {
+background-color: #e0e0e0;
+}
+
+.arrow {
+width: 0;
+height: 0;
+margin-left: 5px;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+}
+
+.arrow.down {
+border-top: 5px solid #333;
+}
+
+.arrow.up {
+border-bottom: 5px solid #333;
+}
+
+.replies {
+max-height: 400px; /* Example height */
+overflow-y: auto;
+}
+
+.pico-color-black{
+color: black;
+}
+#commentsSection {
+max-height: 100vh;
+overflow-y: auto;
+}
+/* CSS for the spinner */
+.loading-spinner {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: 8px solid #f3f3f3;
+border-top: 8px solid #3498db;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+animation: spin 1s linear infinite;
+z-index: 1000; /* Make sure it stays on top */
+display: none; /* Initially hidden */
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+/* Style the Sort By container */
+.sort-by-container {
+display: flex;
+justify-content: flex-end; /* Align to the right */
+margin-bottom: 1rem;
+}
+
+.sort-by-container label {
+font-size: 0.9rem;
+margin-right: 0.5rem;
+}
+
+#sortOptions {
+width: 150px; /* Set a smaller width for the dropdown */
+padding: 5px;
+font-size: 0.9rem;
+border-radius: 5px;
+}
+.hidden, #searchCommentContainer{
+display: none;
+}
+#searchGroup{
+display: flex;
+justify-content: center;
+
+}
+.text-center{
+text-align: center;
+}
+.detailedVideo p{
+    margin: 5px !important;
+}
