@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>YouTube Comment Finder</title>
+    <meta name="description" content="Easily view and search through comments on YouTube videos. Sort by likes, date, and more.">
+</head>
+<body>
+    <main class="container mt-5">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <strong>Sweet Remark</strong>
+                </a>
+                <div class="navbar-burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" target="_blank" href="https://www.buymeacoffee.com/letmecode">
+                        <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Coffee&emoji=🍵&slug=letmecode&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="title has-text-centered">YouTube Comment Viewer</h1>
+
+        <form id="youtubeForm" class="box">
+            <div class="field">
+                <label class="label" for="youtubeUrl">Enter YouTube URL:</label>
+                <div class="control">
+                    <input class="input" type="url" id="youtubeUrl" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="sortOptions">Sort By:</label>
+                <div class="control">
+                    <div class="select">
+                        <select id="sortOptions">
+                            <option value="relevance">Relevance</option>
+                            <option value="time">Time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-primary" type="submit">Search</button>
+            </div>
+        </form>
+
+        <div id="videoDetails"></div>
+
+        <div class="mt-4">
+            <div id="searchCommentContainer" class="field">
+                <div class="control has-icons-left">
+                    <input class="input" name="search" id="searchInput" type="search" placeholder="Search any replies or comment" />
+                    <span class="icon is-left">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+                <div class="control">
+                    <button id="searchCommentBtn" class="button is-info">Search</button>
+                </div>
+            </div>
+
+            <div id="commentsSection" class="scrollable"></div>
+        </div>
+    </main>
+
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <script src="./script.js"></script>
+
+    <footer class="footer has-background-light">
+        <div class="content has-text-centered">
+            <p>Made with ❤️ by <a href="https://sweetremark.com" target="_blank">Aritra</a></p>
+        </div>
+    </footer>
+</body>
+</html>
